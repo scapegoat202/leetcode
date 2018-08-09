@@ -1,4 +1,4 @@
-package cn.varfunc.leetcode;
+package cn.varfunc.leetcode.arrays;
 
 import java.util.Arrays;
 import java.util.function.Consumer;

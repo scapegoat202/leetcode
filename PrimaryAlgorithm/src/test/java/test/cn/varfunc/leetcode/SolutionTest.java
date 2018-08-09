@@ -1,6 +1,6 @@
 package test.cn.varfunc.leetcode;
 
-import cn.varfunc.leetcode.Solution;
+import cn.varfunc.leetcode.arrays.Solution;
 import org.junit.Assert;
 import org.junit.Test;
 
