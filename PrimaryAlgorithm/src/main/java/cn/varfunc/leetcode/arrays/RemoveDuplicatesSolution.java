@@ -54,19 +54,4 @@ public class RemoveDuplicatesSolution {
         }
         return ++currentIndex;
     }
-
-
-
-//    private void myRotate(int[] nums, int k, int offset, int n) {
-//        int index = offset;
-//        int nextIndex = (index + k) % nums.length;
-//        Queue<Integer> queue = new LinkedList<>();
-//        queue.offer(nums[index]);
-//        for (int i = 0; i < n; i++) {
-//            queue.offer(nums[nextIndex]);
-//            nums[nextIndex] = queue.remove();
-//            index = nextIndex;
-//            nextIndex = (index + k) % nums.length;
-//        }
-//    }
 }
