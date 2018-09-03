@@ -7,7 +7,7 @@ package cn.varfunc.leetcode.strings;
  */
 public class FirstUniqCharSolution {
     public int firstUniqChar(String s) {
-        /* 使用Map的解法，在Map里key为s中存在的字符，value为其出现的次数 */
+//        /* 使用Map的解法，在Map里key为s中存在的字符，value为其出现的次数 */
 //        Map<Character, Integer> map = new HashMap<>();
 //        for (int i = 0; i < s.length(); i++) {
 //            if (map.containsKey(s.charAt(i))) {
