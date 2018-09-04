@@ -33,14 +33,8 @@ public class MyAtoiSolution {
         BigInteger result = BigInteger.ZERO;
 
         for (int i = 0; i < ts.length(); i++) {
-            if (i == 0) {
-                if (isNegative) {
-                    continue;
-                } else {
-                    if (ts.charAt(i) == '+') {
-                        continue;
-                    }
-                }
+            if (i == 0 && (isNegative || ts.charAt(i) == '+')) {
+                continue;
             }
 
             if (Character.isDigit(ts.charAt(i))) {
@@ -59,6 +53,51 @@ public class MyAtoiSolution {
             return Integer.MAX_VALUE;
         } else {
             return result.intValue();
+        }
+    }
+
+    public int myAtoi2(String str) {
+        String ts = str.trim();
+        int negativeMark = 1;
+
+        if (ts.length() > 0) {
+            if (ts.charAt(0) == '-') {
+                negativeMark = -1;
+            }
+        } else {
+            return 0;
+        }
+
+        long result = 0;
+        int digits = 0;
+
+        for (int i = 0; i < ts.length(); i++) {
+            if (i == 0 && (negativeMark == -1 || ts.charAt(i) == '+')) {
+                continue;
+            }
+
+            if (ts.charAt(i) >= '0' && ts.charAt(i) <= '9') {
+                result = result * 10 + (ts.charAt(i) - '0');
+                if (result != 0) {
+                    digits++;
+                }
+            } else {
+                break;
+            }
+
+            if (digits > 12) {
+                break;
+            }
+        }
+
+        result *= negativeMark;
+
+        if (result < Integer.MIN_VALUE) {
+            return Integer.MIN_VALUE;
+        } else if (result > Integer.MAX_VALUE) {
+            return Integer.MAX_VALUE;
+        } else {
+            return (int) result;
         }
     }
 }
