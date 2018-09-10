@@ -17,13 +17,3 @@ class DeleteNodeSolution {
         node.next = nextNode.next;
     }
 }
-
-class ListNode {
-    @SuppressWarnings("WeakerAccess")
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
