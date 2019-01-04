@@ -1,5 +1,2 @@
 rootProject.name = 'leetcode'
-rootProject.name = 'leetcode'
-rootProject.name = 'leetcode'
 include 'PrimaryAlgorithm'
-
